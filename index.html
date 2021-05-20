@@ -10,18 +10,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="container">
 
-        <h3>Quản lý nhân viên</h3>
+        <h3 class="title">Quản lý nhân viên</h3>
         <div class="info">
             <div class="form-group">
                 <label for=""></label>
                 <small id="helpId" class="text-muted">Mã nhân viên</small>
                 <input type="text" name="" id="maNhanVien" class="form-control" placeholder=""
                     aria-describedby="helpId">
+                <p class="text-danger" id="error_requirement_maNhanVien_kiemTraRong"></p>
             </div>
 
             <div class="form-group">
@@ -29,6 +32,8 @@
                 <small id="helpId" class="text-muted">Tên nhân viên</small>
                 <input type="text" name="" id="tenNhanVien" class="form-control" placeholder=""
                     aria-describedby="helpId">
+                <p class="text-danger" id="error_requirement_tenNhanVien_kiemTraRong"></p>
+
             </div>
         </div>
         <div class="select">
@@ -47,6 +52,8 @@
                 <small id="helpId" class="text-muted">Lương cơ bản</small>
                 <input type="text" name="" id="luongCoBan" class="form-control" placeholder=""
                     aria-describedby="helpId">
+                <p class="text-danger" id="error_requirement_luongCoBan_kiemTraRong"></p>
+
             </div>
         </div>
 
@@ -55,12 +62,38 @@
                 <label for=""></label>
                 <small id="helpId" class="text-muted">Giờ làm trong tháng</small>
                 <input type="text" name="" id="gioLam" class="form-control" placeholder="" aria-describedby="helpId">
+                <p class="text-danger" id="error_requirement_gioLam_kiemTraRong"></p>
+
             </div>
         </div>
 
         <div class="button">
-            <button class="btn btn-success" id="btnXacNhan">Hiển thị thông tin</button>
+            <button class="btn" id="btnXacNhan">Thêm nhân viên</button>
+            <button class="btn" id="btnLuu">Lưu thông tin</button>
+
         </div>
+
+
+        <table class="table col-md-12 mb-5 ">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Tên nhân viên</th>
+                    <th>Chức vụ</th>
+                    <th>Lương cơ bản</th>
+                    <th>Tổng lương</th>
+                    <th>Giờ làm/tháng</th>
+                    <th>Xếp loại nhân viên</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+
+            <tbody id="tblNhanVien">
+
+            </tbody>
+        </table>
     </div>
     <!-- 
             <div class="col-md-6">
@@ -91,6 +124,7 @@
 
     <!-- models -->
     <script src="./models/NhanVien.js"></script>
+    <script src="./models/validation.js"></script>
 
     <!-- controllers -->
     <script src="./controllers/index.js"></script>

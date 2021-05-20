@@ -1,0 +1,22 @@
+.title {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+}
+
+.button {
+  float: right;
+  padding: 20px 0;
+}
+
+#btnXacNhan {
+  border: 1px solid rgb(5, 192, 5);
+  color: rgb(5, 192, 5);
+  margin-right: 10px;
+}
+
+#btnLuu {
+  border: 1px solid rgb(43, 43, 184);
+  color: rgb(43, 43, 184);
+}
